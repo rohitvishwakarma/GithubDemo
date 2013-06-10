@@ -1,0 +1,5 @@
+<apex:page >
+  <apex:pageBlock title="Your Issue will be resolved shortly!!!
+  Thank You!!!">
+    </apex:pageBlock>
+</apex:page>

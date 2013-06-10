@@ -1,0 +1,29 @@
+<apex:page StandardController="DiscussionBook__c" showHeader="false" sidebar="false" extensions="DiscussionCont">
+
+<script>
+function myThankyou()
+{
+alert ("Thanks for you queries . We will get back to you shortly")
+}
+</script>
+
+
+<apex:form id="theForm">
+  <apex:pageBlock title="Discussion Board" >
+  <apex:pageBlockSection columns="2">
+      <apex:inputField label="Project Name" value="{!DiscussionBook__c.Project_Name__c}"/>
+      <apex:inputField label="Date" value="{!DiscussionBook__c.SubmittedDate__c}"/>
+      <apex:inputField label="Issue Name" value="{!DiscussionBook__c.IssueName__c}"/>
+      <apex:inputField label="Priority" value="{!DiscussionBook__c.Priority__c}"/>
+      <apex:inputField value="{!DiscussionBook__c.Description__c}"/>
+      <apex:inputField label="Submitter Id" value="{!DiscussionBook__c.Submitter_Id__c}"/>
+     <!-- <apex:inputFile value="{!attachment.body}" filename="{!attachment.name}"/>
+      <apex:commandButton value="Upload" id="upl" action="{!save_attachment}"/>-->
+  <apex:commandButton value="Submit" action={!myThankyou}/>
+  </apex:pageBlockSection>
+  
+      
+  
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

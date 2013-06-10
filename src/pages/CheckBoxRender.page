@@ -1,0 +1,22 @@
+<apex:page controller="checkBoxController" >
+  <apex:form >  
+      <apex:pageBlock id="trainersBlock">
+          <apex:inputCheckbox id="isEmp" value="{!isChecked}" >
+              <apex:actionsupport event="onclick" rerender="SampleView" />
+          </apex:inputCheckbox>
+          
+          <apex:outputPanel id="SampleView">
+             <!-- <apex:pageBlockSection rendered="{!isChecked}">
+                  <apex:pageblockSectionItem >
+                  <apex:outputlabel value="Section 1"/>
+                  </apex:pageblockSectionItem>                           
+              </apex:pageBlockSection>-->
+              <apex:pageBlockSection rendered="{!IF(isChecked = check, false, true)}">
+                  <apex:pageblockSectionItem >
+                  <apex:outputlabel value="Section 2"/>  
+                  </apex:pageblockSectionItem>                        
+              </apex:pageBlockSection>
+          </apex:outputPanel>
+       </apex:pageBlock>
+  </apex:form>
+</apex:page>
